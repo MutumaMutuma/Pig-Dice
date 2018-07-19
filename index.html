@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">
+    <link rel="shortcut icon" href="img/piggy.ico">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <meta charset="utf-8">
     <title>Pig Dice</title>
   </head>
   <body>
+    <div class="card" style="background-color:url(Images/grass-landing.jpg); font-family: 'Gochi Hand', cursive; font-size:30px;">
+      <div class="start-menu container">
+          <div class="what">
+          <h1>Pig-Dice</h1>
+            <h3>Let's play!</h3>
+      <!---form for player1----->
+              <form id="player-1">
+                <div class="form-group">
+                  <label for="player1Name">Player 1:</label><br>
+                  <input required class="player1Name" type="text" placeholder="Enter your name">
+                </div>
+              </form>
+      <!---form for player2----->
+              <form id="player-2">
+                <div class="form-group">
+                  <label for="player2Name">Player 2:</label><br>
+                  <input required class="player2Name" type="text" placeholder="Enter your name">
+                </div>
+              </form>
+      <!---button to start your game-->
+              <button id="start" class="btn btn-success">Start</button>
+          </div>
+        </div>
+    </div>
+
 
   </body>
 </html>
