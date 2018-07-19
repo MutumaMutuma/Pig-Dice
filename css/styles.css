@@ -1,9 +1,11 @@
-.container{
+.container-fluid{
   background-image: url("../Images/hd_wallpaper_perfect_backgrounds_2053_high_quality_B4wHeA3.jpg");
   color:white;
   font-size: 30px;
   text-align: center;
+  padding: 150px;
 }
+
 h1{
   font-size: 50px;
 }
