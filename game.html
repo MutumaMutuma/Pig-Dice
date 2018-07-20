@@ -8,6 +8,7 @@
     <title> The Game</title>
   </head>
   <body>
+    <img src="Images/Dice-icon.png" alt="" height="80px" width="80px">
     <div class="wrapper clearfix">
   <div class="player-0-panel active-0">
     <div class="game-panel">
@@ -39,13 +40,19 @@
         <div class="player-current-score" id="current-1">0</div>
       </div>
     </div>
-    <div class="rules-panel" style="display:none">
+    <div class="rules-panel" style="display:none; overflow :auto;">
       <h3>Gameplay</h3>
       <p>On a turn, a player rolls the die repeatedly until either:</p>
       <li>1 is rolled</li>
       <li>The player chooses to hold (stop rolling)</li>
       <br>
       <p>If the player chooses to hold, all of the points rolled during that turn are added to his or her score.</p>
+      <h4>Easier Instructions</h4>
+      <p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold" </p>
+  <p>If the player rolls a 1, they score nothing and it becomes the next player's turn. </p>
+  <p>If the player rolls any other number, it is added to their turn total and the player's turn continues. </p>
+  <p>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn. </p>
+  <p>The first player to score 100 or more points wins</p>
       <button class="btn-back"><i class="ion-ios-arrow-left color-0"></i>Back to game</button>
     </div>
   </div>

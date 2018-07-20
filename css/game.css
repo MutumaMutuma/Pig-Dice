@@ -7,31 +7,15 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body{
+  background-color: #a53d04;
+}
 .clearfix::after {
   content: "";
   display: table;
   clear: both;
 }
 
-body {
-  background: #c9ffbf; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #ffafbd,
-    #c9ffbf
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #ffafbd,
-    #c9ffbf
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  font-family: Lato;
-  font-weight: 300;
-  position: relative;
-  height: 100vh;
-  color: #555;
-}
 
 h3,
 p,
