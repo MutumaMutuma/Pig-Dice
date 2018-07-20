@@ -1,4 +1,4 @@
-// logic interface
+//bussiness interface
 var scores, roundScore, activePlayer, gamePlaying;
 var btnRoll = document.querySelector(".btn-roll");
 var btnHold = document.querySelector(".btn-hold");
@@ -22,10 +22,10 @@ init();
 
 document.querySelector(".btn-roll").addEventListener("click", function() {
   if (gamePlaying) {
-    // 1. random number
+    // my random numbers
     var dice = Math.floor(Math.random() * 6) + 1;
 
-    // 2. display result
+    // function that will desplay my results
     var diceDOM = document.querySelector(".dice");
     diceDOM.style.display = "block";
     diceDOM.src = diceimgs["diceimg" + activePlayer + dice];
@@ -42,7 +42,7 @@ document.querySelector(".btn-roll").addEventListener("click", function() {
         "#current-" + activePlayer
       ).textContent = roundScore;
     } else {
-      //disable button
+      // my disabled button
 
       disableBtn(btnRoll, 1000);
       hideRolledMsg();
@@ -65,8 +65,7 @@ document.querySelector(".btn-hold").addEventListener("click", function() {
     document.querySelector("#score-" + activePlayer).textContent =
       scores[activePlayer];
 
-    //check if player won the game
-
+    //how to check if one of my players have won
     if (scores[activePlayer] >= 50) {
       document.querySelector("#name-" + activePlayer).textContent = "Winner!";
       document.querySelector(".dice").style.display = "none";
@@ -111,6 +110,8 @@ document.querySelector(".btn-back").addEventListener("click", function() {
   }
 });
 
+
+// Logic interface
 function init() {
   scores = [0, 0];
   roundScore = 0;
