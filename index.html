@@ -9,10 +9,11 @@
     <title>Pig Dice</title>
   </head>
   <body>
-    <div class="card" style="background-color:url(Images/grass-landing.jpg); font-family: 'Gochi Hand', cursive; font-size:30px;">
+    <div class="container-fluid" style="background-color:url(Images/grass-landing.jpg); font-family: 'Gochi Hand', cursive; font-size:30px;">
       <div class="start-menu container">
           <div class="what">
-          <h1>Pig-Dice</h1>
+
+          <h1 style="color:white; font-size:40px;"> Pig-Dice  <img src="Images/diceLogo.png" alt="" height="70px" width="70px"></h1>
             <h3>Let's play!</h3>
       <!---form for player1----->
               <form id="player-1">
@@ -29,7 +30,15 @@
                 </div>
               </form>
       <!---button to start your game-->
-              <button id="start" class="btn btn-success">Start</button>
+      <div class="form-group">
+                       <label for="new-age-range">Level:</label>
+                       <select id="agelist" onchange="ageRange()" name="type">
+                        <a href="game.html"><option>EASY</option></a>
+                         <option>MEDIUM</option>
+                          <option>HARD</option>
+                       </select>
+                     </div>
+            <a href=""><button id="start" class="btn btn-warning"><span class="glyphicon glyphicon-play"></span> Play</button></a>
           </div>
         </div>
     </div>

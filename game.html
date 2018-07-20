@@ -1,10 +1,66 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="shortcut icon" href="Images/diceLogo.png">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <meta charset="utf-8">
     <title> The Game</title>
   </head>
   <body>
+    <div class="wrapper clearfix">
+  <div class="player-0-panel active-0">
+    <div class="game-panel">
+      <div class="player-name" id="name-0">Player 1</div>
+      <div class="player-score-0" id="score-0">43</div>
+      <div class="player-0-rolled-1">
+        <h3>Sorry! You rolled 1.</h3>
+      </div>
+      <div class="player-current-box-0">
+        <div class="player-current-label">Current</div>
+        <div class="player-current-score" id="current-0">11</div>
+      </div>
+    </div>
+    <div class="rules-panel" style="display:none">
+      <h3>Goal</h3>
+      <p>Be the first player to reach 50 points.</p>
+    </div>
+  </div>
 
+  <div class="player-1-panel">
+    <div class="game-panel">
+      <div class="player-name" id="name-1">Player 2</div>
+      <div class="player-score-1" id="score-1">72</div>
+      <div class="player-1-rolled-1">
+        <h3>Oops! You rolled 1.</h3>
+      </div>
+      <div class="player-current-box-1">
+        <div class="player-current-label">Current</div>
+        <div class="player-current-score" id="current-1">0</div>
+      </div>
+    </div>
+    <div class="rules-panel" style="display:none">
+      <h3>Gameplay</h3>
+      <p>On a turn, a player rolls the die repeatedly until either:</p>
+      <li>1 is rolled</li>
+      <li>The player chooses to hold (stop rolling)</li>
+      <br>
+      <p>If the player chooses to hold, all of the points rolled during that turn are added to his or her score.</p>
+      <button class="btn-back"><i class="ion-ios-arrow-left color-0"></i>Back to game</button>
+    </div>
+  </div>
+  <div class="game-panel">
+
+    <button class="btn-new"><i class="ion-ios-plus-outline icon color-0"></i>New game</button>
+    <button class="btn-rules"><i class="ion-ios-compose-outline icon color-0"></i>Rules</button>
+    <button class="btn-roll"><i class="ion-ios-loop icon color-0"></i>Roll dice</button>
+    <button class="btn-hold"><i class="ion-ios-download-outline icon color-0"></i>Hold</button>
+    <img src="1-dice-5.png" alt="Dice" class="dice">
+  </div>
+
+</div>
+<!--  -->
+<script src="js/gamescripts.js"></script>
+<!--  -->
   </body>
 </html>
