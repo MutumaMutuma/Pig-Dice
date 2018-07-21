@@ -1,0 +1,17 @@
+.container{
+  background-color: inherit;
+}
+body{
+  background-color: blue;
+}
+.card{
+  background-color: black;
+  color: white;
+  padding-top: 100px;
+}
+h2{
+  font-family: 'Freckle Face', cursive;
+}
+h5{
+  font-family: 'Concert One', cursive;
+}

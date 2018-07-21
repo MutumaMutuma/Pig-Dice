@@ -1,56 +1,55 @@
-/**********************************************
-*** GENERAL
-**********************************************/
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body{
-  background-color: #a53d04;
-}
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/bg1.jpeg);
+  font-family: 'Cardo', serif;
 }
 
-
-h3,
-p,
-li {
-  text-transform: uppercase;
+.container {
+  margin: 10px auto;
 }
 
-.wrapper {
-  width: 1000px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
+#column {
+  background: #FFFFF;
+  height: 560px;
+  width: 100%;
+  margin: 14px auto;
 }
 
-.rules-panel {
-  line-height: 30px;
-}
-
-.player-0-panel,
-.player-1-panel {
+.gamer-0-section, .gamer-1-section {
   width: 50%;
   float: left;
-  height: 600px;
-  padding: 100px;
+  height: 550px;
+  padding: 40px;
 }
 
-/**********************************************
-*** PLAYERS
-**********************************************/
+.gamer-roundscore-box {
+  background: #00B257;
+  color: #fff;
+  width: 150px;
+  margin: 0 auto;
+  position: relative;
+  top: -60px;
+  padding-bottom: 12px;
+  font-size: 20px;
+  text-align: center;
+}
 
-.player-name {
+.gamer-current-box {
+  background-color: #00B257;
+  color: #fff;
+  width: 80px;
+  position: relative;
+  top: -80px;
+  margin: 0 auto;
+  padding: 4px;
+  text-align: center;
+}
+
+#roll-label {
+  color: #fff;
+  font-size: 18px;
+}
+
+.gamer-name {
   font-size: 40px;
   text-align: center;
   text-transform: uppercase;
@@ -59,56 +58,40 @@ li {
   margin-top: 20px;
   margin-bottom: 10px;
   position: relative;
+  color: #f7f7f7;
 }
 
-.player-score-0 {
+.gamer-score {
   text-align: center;
   font-size: 80px;
   font-weight: 100;
-  color: #eb4d4d;
+  color: #EB4D4D;
   margin-bottom: 130px;
 }
 
-.player-score-1 {
-  text-align: center;
-  font-size: 80px;
-  font-weight: 100;
-  color: #2ecc71;
-  margin-bottom: 130px;
+.roundscore {
+  font-size: 34px;
 }
 
-.player-0-rolled-1 {
-  text-align: center;
-  margin-bottom: 10px;
+.playing {
+  background-color: #00BDF8;
 }
 
-.player-1-rolled-1 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.active-0 {
-  background-color: rgba(255, 175, 189, 0.1);
-}
-.active-1 {
-  background-color: rgba(46, 204, 113, 0.1);
-}
-.active-0 .player-name,
-.active-1 .player-name {
+.playing .gamer-name {
   font-weight: 300;
 }
 
-.active .player-name::after {
+.playing .gamer-name::after {
   content: "\2022";
   font-size: 47px;
   position: absolute;
-  color: #eb4d4d;
+  color: #EB4D4D;
   top: -7px;
-  right: 10px;
+  right: 8px;
 }
 
-.player-current-box-0 {
-  background-color: #eb4d4d;
+.gamer-current-box {
+  background-color: #EB4D4D;
   color: #fff;
   width: 40%;
   margin: 0 auto;
@@ -116,24 +99,27 @@ li {
   text-align: center;
 }
 
-.player-current-box-1 {
-  background-color: #2ecc71;
-  color: #fff;
-  width: 40%;
-  margin: 0 auto;
-  padding: 12px;
-  text-align: center;
-}
-
-.player-current-label {
+.gamer-current-label {
   text-transform: uppercase;
   margin-bottom: 10px;
-  font-size: 12px;
+  font-size: 14px;
   color: #222;
 }
 
-.player-current-score {
-  font-size: 30px;
+.gamer-current-score {
+  font-size: 40px;
+}
+
+.final-score {
+  position: absolute;
+  margin-left: 50%;
+  top: -200px;
+  transform: translateX(-50%);
+  font-size: 18px;
+  text-align: center;
+  width: 170px;
+  padding: 8px;
+  border: none;
 }
 
 button {
@@ -141,13 +127,14 @@ button {
   width: 200px;
   left: 50%;
   transform: translateX(-50%);
-  color: #555;
-  background: none;
-  border: none;
+  color: #fff;
+  background-color: #00BDF8;
+  border: 2px solid transparent;
   font-family: Lato;
   font-size: 20px;
   text-transform: uppercase;
   cursor: pointer;
+  border-radius: 7px;
   font-weight: 300;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -155,75 +142,95 @@ button {
 button:hover {
   font-weight: 600;
 }
+
 button:hover i {
   margin-right: 20px;
+}
+
+#btn-col {
+  text-align: center;
 }
 
 button:focus {
   outline: none;
 }
 
-i {
+i, ion-icon {
+  color: #EB4D4D;
   display: inline-block;
-  margin-right: 15px;
+  margin-right: 10px;
   font-size: 32px;
   line-height: 1;
   vertical-align: text-top;
-  margin-top: -4px;
+  margin-top: -6px;
   transition: margin 0.3s;
 }
 
-.color-0 {
-  color: #eb4d4d;
-}
-.color-1 {
-  color: #2ecc71;
+.new-game {
+  left: 50%;
+  top: 33px;
+  margin-top: 30px;
 }
 
-.btn-new {
-  top: 105px;
+.roll-dice {
+  left: 42%;
+  top: 0px;
+  margin-right: 10px;
 }
+
+.hold-score {
+  margin-left: 12%;
+  top: 0px;
+  width: 160px;
+}
+
 .btn-rules {
-  top: 45px;
+  left: 50%;
+  top: 75px;
+  margin-top: 40px;
+  width: 140px;
 }
-.btn-roll {
-  top: 413px;
+
+.btn-rules a, .btn-play a {
+  color: #fff;
+  text-decoration: none;
 }
-.btn-back {
-  top: 467px;
+
+input.final-score {
+  color: #EB4D4D;
+  font-size: 20px;
+  width: 180px;
+  border: 2px solid #03141A;
+  border-radius: 10px;
 }
-.btn-hold {
-  top: 477px;
+
+input.final-score:focus {
+  border: none;
 }
 
 .dice {
+  display: none;
   position: absolute;
   left: 50%;
-  top: 178px;
+  top: 200px;
   transform: translateX(-50%);
-  height: 100px;
-  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
+  height: 150px;
+  width: 150px;
+  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+  border-radius: 50%;
 }
 
-.winner-0 {
+.winner {
   background-color: #f7f7f7;
 }
-.winner .player-name {
+
+.winner .gamer-name {
   font-weight: 300;
-  color: #eb4d4d;
+  color: #EB4D4D;
 }
 
-.winner-0 {
-  background-color: rgba(255, 175, 189, 0.1);
-}
-.winner-1 {
-  background-color: rgba(46, 204, 113, 0.1);
-}
-.winner-0 .player-name {
-  font-weight: 300;
-  color: #eb4d4d;
-}
-.winner-1 .player-name {
-  font-weight: 300;
-  color: #2ecc71;
+#game-rules {
+  color: white;
+  font-size: 25px;
+  margin: 10px auto;
 }
