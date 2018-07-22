@@ -1,3 +1,4 @@
+// user interface logic
 var scores, turnScore, activePlayer, diceRoll, gameOn;
 
 
@@ -54,7 +55,7 @@ $(document).ready(function() {
   })
 
 })
-
+//business logic
 var nextGamer = function() {
   activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
   turnScore = 0;
@@ -65,7 +66,7 @@ var nextGamer = function() {
   $(".dice").hide();
   $("#roundscore-0").text(0);
   $("#roundscore-1").text(0);
-}
+};
 
 function initializeGame() {
   scores = [0, 0];
