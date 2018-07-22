@@ -1,6 +1,6 @@
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/bg1.jpeg);
-  font-family: 'Cardo', serif;
+  background-color: black;
+  font-family: 'Skranji', cursive;
 }
 
 .container {
@@ -22,7 +22,7 @@ body {
 }
 
 .gamer-roundscore-box {
-  background: #00B257;
+  background: #6187D3;
   color: #fff;
   width: 150px;
   margin: 0 auto;
@@ -34,7 +34,7 @@ body {
 }
 
 .gamer-current-box {
-  background-color: #00B257;
+  background-color: #6187D3;
   color: #fff;
   width: 80px;
   position: relative;
@@ -221,7 +221,7 @@ input.final-score:focus {
 }
 
 .winner {
-  background-color: #f7f7f7;
+  background-color: #b5a1cc;
 }
 
 .winner .gamer-name {
